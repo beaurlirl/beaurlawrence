@@ -36,6 +36,12 @@ type FeedItem = {
   id: string
 }
 
+type CurrentProject = {
+  name: string
+  link: string
+  id: string
+}
+
 export const PROJECTS: Project[] = [
   {
     name: '3D & Brand Identities',
@@ -79,6 +85,24 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: '2020',
     link: '#',
     id: 'work2',
+  },
+]
+
+export const CURRENT_PROJECTS: CurrentProject[] = [
+  {
+    name: 'plaza.onl',
+    link: 'https://plaza.onl',
+    id: 'current-1',
+  },
+  {
+    name: 'hue.onl',
+    link: 'https://hue.onl',
+    id: 'current-2',
+  },
+  {
+    name: 'Nimbus Online',
+    link: 'https://nimbus.online',
+    id: 'current-3',
   },
 ]
 

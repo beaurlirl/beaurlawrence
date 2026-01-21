@@ -15,6 +15,7 @@ import { AnimatedBackground } from '@/components/ui/animated-background'
 import {
   PROJECTS,
   WORK_EXPERIENCE,
+  CURRENT_PROJECTS,
   BLOG_POSTS,
   FEED_ITEMS,
   EMAIL,
@@ -221,6 +222,31 @@ export default function Personal() {
               </div>
               <span className="text-xs uppercase tracking-[0.2em] text-zinc-400">
                 {job.start} - {job.end}
+              </span>
+            </a>
+          ))}
+        </div>
+      </motion.section>
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-lg font-medium">Current Projects</h3>
+        <div className="flex flex-col space-y-3">
+          {CURRENT_PROJECTS.map((project) => (
+            <a
+              className="flex items-center justify-between rounded-xl border border-zinc-200/60 px-4 py-3 text-sm text-zinc-600 transition-colors hover:border-zinc-400/60 hover:text-zinc-900 dark:border-zinc-800/80 dark:text-zinc-300 dark:hover:border-zinc-600/80 dark:hover:text-white"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={project.id}
+            >
+              <p className="text-base font-medium text-zinc-900 dark:text-zinc-100">
+                {project.name}
+              </p>
+              <span className="text-xs uppercase tracking-[0.2em] text-zinc-400">
+                Live
               </span>
             </a>
           ))}
