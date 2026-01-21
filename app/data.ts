@@ -2,7 +2,8 @@ type Project = {
   name: string
   description: string
   link: string
-  video: string
+  media: string
+  mediaType: 'image' | 'video'
   id: string
 }
 
@@ -27,50 +28,57 @@ type SocialLink = {
   link: string
 }
 
+type FeedItem = {
+  title: string
+  description: string
+  link: string
+  platform: string
+  id: string
+}
+
 export const PROJECTS: Project[] = [
   {
-    name: 'Motion Primitives Pro',
-    description:
-      'Advanced components and templates to craft beautiful websites.',
-    link: 'https://pro.motion-primitives.com/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+    name: '3D & Brand Identities',
+    description: 'Concept-driven visual systems, product renders, and brand worlds.',
+    link: '/3d-branding',
+    media: '/cover.jpg',
+    mediaType: 'image',
     id: 'project1',
   },
   {
-    name: 'Motion Primitives',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+    name: 'Architectural Renders',
+    description: 'Spatial visualization with a focus on mood, material, and light.',
+    link: '/architectural-renders',
+    media: '/cover.jpg',
+    mediaType: 'image',
     id: 'project2',
+  },
+  {
+    name: 'Web Development',
+    description: 'Modern, high-performance sites with strong brand presence.',
+    link: '/web-development',
+    media: '/cover.jpg',
+    mediaType: 'image',
+    id: 'project3',
   },
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: 'Reglazed Studio',
-    title: 'CEO',
-    start: '2024',
+    company: 'Independent Studio',
+    title: 'Creative Director',
+    start: '2020',
     end: 'Present',
-    link: 'https://ibelick.com',
+    link: '#',
     id: 'work1',
   },
   {
-    company: 'Freelance',
-    title: 'Design Engineer',
-    start: '2022',
-    end: '2024',
-    link: 'https://ibelick.com',
+    company: 'Client Collaborations',
+    title: '3D / Brand Designer',
+    start: '2016',
+    end: '2020',
+    link: '#',
     id: 'work2',
-  },
-  {
-    company: 'Freelance',
-    title: 'Front-end Developer',
-    start: '2017',
-    end: 'Present',
-    link: 'https://ibelick.com',
-    id: 'work3',
   },
 ]
 
@@ -78,48 +86,59 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: 'Exploring the Intersection of Design, AI, and Design Engineering',
     description: 'How AI is changing the way we design',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-1',
+    link: '/feed/exploring-the-intersection-of-design-ai-and-design-engineering',
+    uid: 'feed-1',
   },
   {
     title: 'Why I left my job to start my own company',
-    description:
-      'A deep dive into my decision to leave my job and start my own company',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-2',
+    description: 'A deeper look at the shift to independent work.',
+    link: '/feed/exploring-the-intersection-of-design-ai-and-design-engineering',
+    uid: 'feed-2',
   },
   {
     title: 'What I learned from my first year of freelancing',
-    description:
-      'A look back at my first year of freelancing and what I learned',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-3',
+    description: 'Lessons on process, pricing, and creative growth.',
+    link: '/feed/exploring-the-intersection-of-design-ai-and-design-engineering',
+    uid: 'feed-3',
   },
   {
     title: 'How to Export Metadata from MDX for Next.js SEO',
-    description: 'A guide on exporting metadata from MDX files to leverage Next.js SEO features.',
-    link: '/blog/example-mdx-metadata',
-    uid: 'blog-4',
+    description: 'A guide to MDX metadata for clean SEO setups.',
+    link: '/feed/example-mdx-metadata',
+    uid: 'feed-4',
   },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    label: 'Github',
-    link: 'https://github.com/ibelick',
+    label: 'Instagram',
+    link: 'https://instagram.com/',
   },
   {
-    label: 'Twitter',
-    link: 'https://twitter.com/ibelick',
+    label: 'Behance',
+    link: 'https://www.behance.net/',
   },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ibelick',
-  },
-  {
-    label: 'Instagram',
-    link: 'https://www.instagram.com/ibelick',
+    link: 'https://www.linkedin.com/',
   },
 ]
 
-export const EMAIL = 'your@email.com'
+export const FEED_ITEMS: FeedItem[] = [
+  {
+    title: 'Instagram — latest drops',
+    description: 'Short-form visuals, renders, and concept snippets.',
+    link: 'https://instagram.com/',
+    platform: 'Instagram',
+    id: 'feed-ig',
+  },
+  {
+    title: 'Behance — case studies',
+    description: 'Long-form breakdowns of brand and visualization work.',
+    link: 'https://www.behance.net/',
+    platform: 'Behance',
+    id: 'feed-behance',
+  },
+]
+
+export const EMAIL = 'hello@beaulawrence.com'

@@ -30,3 +30,22 @@
   --sh-property: #73daca;
   --sh-entity: #e0af68;
 }
+
+html,
+body {
+  background: #0b0b0c;
+  color: #e5e7eb;
+}
+
+.rgb-blur {
+  position: fixed;
+  inset: -20%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(35% 35% at 78% 28%, rgba(255, 0, 122, 0.35), transparent 70%),
+    radial-gradient(40% 40% at 18% 78%, rgba(0, 140, 255, 0.35), transparent 72%),
+    radial-gradient(30% 30% at 50% 10%, rgba(0, 255, 170, 0.2), transparent 60%);
+  filter: blur(90px);
+  opacity: 0.9;
+}
