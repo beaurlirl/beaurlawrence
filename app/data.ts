@@ -112,8 +112,8 @@ export const CURRENT_PROJECTS: CurrentProject[] = [
     id: 'current-2',
   },
   {
-    name: 'Nimbus Online',
-    link: 'https://nimbus.online',
+    name: 'directory',
+    link: 'https://directory.onl',
     id: 'current-3',
   },
 ]
