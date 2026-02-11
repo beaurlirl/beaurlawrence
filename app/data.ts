@@ -83,12 +83,20 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work1',
   },
   {
+    company: 'Michael De Luna, AIA',
+    title: 'Design & Media Consultant',
+    start: '2023',
+    end: 'Present',
+    link: 'https://www.mdeluna.com',
+    id: 'work2',
+  },
+  {
     company: 'Client Collaborations',
     title: '3D / Brand Designer',
     start: '2016',
     end: '2020',
     link: '#',
-    id: 'work2',
+    id: 'work3',
   },
 ]
 
@@ -140,11 +148,7 @@ export const BLOG_POSTS: BlogPost[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Instagram',
-    link: 'https://instagram.com/',
-  },
-  {
-    label: 'Behance',
-    link: 'https://www.behance.net/',
+    link: 'https://www.instagram.com/beaulawrence/',
   },
   {
     label: 'LinkedIn',
@@ -156,16 +160,9 @@ export const FEED_ITEMS: FeedItem[] = [
   {
     title: 'Instagram — latest drops',
     description: 'Short-form visuals, renders, and concept snippets.',
-    link: 'https://instagram.com/',
+    link: 'https://www.instagram.com/beaulawrence/',
     platform: 'Instagram',
     id: 'feed-ig',
-  },
-  {
-    title: 'Behance — case studies',
-    description: 'Long-form breakdowns of brand and visualization work.',
-    link: 'https://www.behance.net/',
-    platform: 'Behance',
-    id: 'feed-behance',
   },
 ]
 
