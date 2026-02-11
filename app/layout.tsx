@@ -51,13 +51,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geist.variable} ${geistMono.variable} bg-[#0b0b0c] tracking-tight antialiased text-zinc-100 dark`}
+        className={`${geist.variable} ${geistMono.variable} bg-white tracking-tight antialiased text-zinc-900`}
       >
         <ThemeProvider
           enableSystem={false}
           attribute="class"
           storageKey="theme"
-          defaultTheme="dark"
+          defaultTheme="light"
         >
           <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
             <div className="rgb-blur" aria-hidden="true" />

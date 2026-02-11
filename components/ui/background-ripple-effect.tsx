@@ -42,12 +42,11 @@ export function BackgroundRippleEffect() {
           '--my': '50%',
           '--ripple-opacity': '0',
           backgroundImage: `
-            linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px),
-            radial-gradient(420px circle at var(--mx) var(--my), rgba(255, 197, 80, 0.42), transparent 55%),
-            radial-gradient(420px circle at var(--mx) var(--my), rgba(0, 140, 255, 0.35), transparent 60%)
+            linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px),
+            radial-gradient(420px circle at var(--mx) var(--my), rgba(255, 220, 140, 0.7), transparent 55%)
           `,
-          backgroundSize: '56px 56px, 56px 56px, 100% 100%, 100% 100%',
+          backgroundSize: '56px 56px, 56px 56px, 100% 100%',
           opacity: 'var(--ripple-opacity)',
           transition: 'opacity 300ms ease',
         } as React.CSSProperties

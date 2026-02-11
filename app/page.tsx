@@ -44,15 +44,21 @@ const TRANSITION_SECTION = {
 type ProjectMediaProps = {
   src: string
   type: 'image' | 'video'
+  accent: 'red' | 'yellow' | 'blue'
 }
 
-function ProjectMedia({ src, type }: ProjectMediaProps) {
+const ACCENT_MAP = {
+  red: 'bg-[#ff1a1a]',
+  yellow: 'bg-[#ffcc00]',
+  blue: 'bg-[#1a4fff]',
+}
+
+function ProjectMedia({ src, type, accent }: ProjectMediaProps) {
   if (type === 'image') {
     return (
-      <img
-        src={src}
-        alt=""
-        className="aspect-video w-full rounded-xl object-cover"
+      <div
+        className={`aspect-video w-full rounded-xl ${ACCENT_MAP[accent]} shadow-[0_20px_60px_rgba(0,0,0,0.08)]`}
+        aria-hidden="true"
       />
     )
   }
@@ -148,48 +154,44 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <AnimatedBackground
-          enableHover
-          className="w-full rounded-2xl bg-zinc-100/30 p-6 dark:bg-zinc-900/60"
-          transition={{
-            type: 'spring',
-            bounce: 0,
-            duration: 0.2,
-          }}
-        >
+        <div className="w-full rounded-2xl bg-white/70 p-6 transition-colors hover:bg-black/5">
           <div className="space-y-2">
-            <p className="text-zinc-200">
+            <p className="text-zinc-900">
               Studio-led visual systems built for brands, spaces, and digital
               launches.
             </p>
-            <p className="text-sm text-zinc-400">
+            <p className="text-sm text-zinc-600">
               Select a service below to explore the work.
             </p>
           </div>
-        </AnimatedBackground>
+        </div>
       </motion.section>
 
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-      <h3 className="mb-5 text-lg font-medium">Services</h3>
+      <h3 className="mb-5 text-lg font-medium text-zinc-900">Services</h3>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
-              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-              <ProjectMedia src={project.media} type={project.mediaType} />
+              <div className="relative rounded-2xl bg-white/70 p-1 ring-1 ring-zinc-200/60 ring-inset">
+                <ProjectMedia
+                  src={project.media}
+                  type={project.mediaType}
+                  accent={project.accent}
+                />
               </div>
               <div className="px-1">
                 <a
-                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
+                  className="font-base group relative inline-block font-[450] text-zinc-900"
                   href={project.link}
                   target="_blank"
                 >
                   {project.name}
                   <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
                 </a>
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
+                <p className="text-base text-zinc-600">
                   {project.description}
                 </p>
               </div>
@@ -202,25 +204,25 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
+        <h3 className="mb-5 text-lg font-medium text-zinc-900">Work Experience</h3>
         <div className="flex flex-col space-y-3">
           {WORK_EXPERIENCE.map((job) => (
             <a
-              className="flex items-center justify-between rounded-xl border border-zinc-200/60 px-4 py-3 text-sm text-zinc-600 transition-colors hover:border-zinc-400/60 hover:text-zinc-900 dark:border-zinc-800/80 dark:text-zinc-300 dark:hover:border-zinc-600/80 dark:hover:text-white"
+              className="flex items-center justify-between rounded-xl border border-zinc-200/70 bg-white/60 px-4 py-3 text-sm text-zinc-700 transition-colors hover:border-zinc-400/60 hover:text-zinc-900"
               href={job.link}
               target="_blank"
               rel="noopener noreferrer"
               key={job.id}
             >
               <div>
-                <p className="text-base font-medium text-zinc-900 dark:text-zinc-100">
+                <p className="text-base font-medium text-zinc-900">
                   {job.title}
                 </p>
-                <p className="text-xs text-zinc-500 dark:text-zinc-400">
+                <p className="text-xs text-zinc-600">
                   {job.company}
                 </p>
               </div>
-              <span className="text-xs uppercase tracking-[0.2em] text-zinc-400">
+              <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
                 {job.start} - {job.end}
               </span>
             </a>
@@ -232,20 +234,20 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Current Projects</h3>
+        <h3 className="mb-5 text-lg font-medium text-zinc-900">Current Projects</h3>
         <div className="flex flex-col space-y-3">
           {CURRENT_PROJECTS.map((project) => (
             <a
-              className="flex items-center justify-between rounded-xl border border-zinc-200/60 px-4 py-3 text-sm text-zinc-600 transition-colors hover:border-zinc-400/60 hover:text-zinc-900 dark:border-zinc-800/80 dark:text-zinc-300 dark:hover:border-zinc-600/80 dark:hover:text-white"
+              className="flex items-center justify-between rounded-xl border border-zinc-200/70 bg-white/60 px-4 py-3 text-sm text-zinc-700 transition-colors hover:border-zinc-400/60 hover:text-zinc-900"
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
               key={project.id}
             >
-              <p className="text-base font-medium text-zinc-900 dark:text-zinc-100">
+              <p className="text-base font-medium text-zinc-900">
                 {project.name}
               </p>
-              <span className="text-xs uppercase tracking-[0.2em] text-zinc-400">
+              <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
                 Live
               </span>
             </a>
@@ -258,10 +260,10 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
       <div className="mb-3 flex items-center justify-between">
-        <h3 className="text-lg font-medium">Feed</h3>
+        <h3 className="text-lg font-medium text-zinc-900">Feed</h3>
         <Link
           href="/feed"
-          className="text-sm text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
+          className="text-sm text-zinc-600 hover:text-zinc-900"
         >
           View all
         </Link>
@@ -269,7 +271,7 @@ export default function Personal() {
         <div className="flex flex-col space-y-0">
           <AnimatedBackground
             enableHover
-            className="h-full w-full rounded-lg bg-zinc-100/30 dark:bg-zinc-900/60"
+            className="h-full w-full rounded-lg bg-zinc-100/60"
             transition={{
               type: 'spring',
               bounce: 0,
@@ -284,10 +286,10 @@ export default function Personal() {
                 data-id={post.uid}
               >
                 <div className="flex flex-col space-y-1">
-                  <h4 className="font-normal dark:text-zinc-100">
+                  <h4 className="font-normal text-zinc-900">
                     {post.title}
                   </h4>
-                  <p className="text-zinc-500 dark:text-zinc-400">
+                  <p className="text-zinc-600">
                     {post.description}
                   </p>
                 </div>
@@ -302,17 +304,17 @@ export default function Personal() {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between rounded-xl border border-zinc-200/60 px-4 py-3 text-sm text-zinc-600 transition-colors hover:border-zinc-400/60 hover:text-zinc-900 dark:border-zinc-800/80 dark:text-zinc-300 dark:hover:border-zinc-600/80 dark:hover:text-white"
+              className="flex items-center justify-between rounded-xl border border-zinc-200/70 bg-white/60 px-4 py-3 text-sm text-zinc-700 transition-colors hover:border-zinc-400/60 hover:text-zinc-900"
             >
               <div>
-                <p className="font-medium text-zinc-900 dark:text-zinc-100">
+                <p className="font-medium text-zinc-900">
                   {item.title}
                 </p>
-                <p className="text-xs text-zinc-500 dark:text-zinc-400">
+                <p className="text-xs text-zinc-600">
                   {item.description}
                 </p>
               </div>
-              <span className="text-xs uppercase tracking-[0.2em] text-zinc-400">
+              <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
                 {item.platform}
               </span>
             </a>
@@ -324,10 +326,10 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Connect</h3>
-        <p className="mb-5 text-zinc-600 dark:text-zinc-400">
+        <h3 className="mb-5 text-lg font-medium text-zinc-900">Connect</h3>
+        <p className="mb-5 text-zinc-600">
           Feel free to contact me at{' '}
-          <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
+          <a className="underline text-zinc-900" href={`mailto:${EMAIL}`}>
             {EMAIL}
           </a>
         </p>

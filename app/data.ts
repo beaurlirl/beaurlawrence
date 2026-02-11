@@ -4,6 +4,7 @@ type Project = {
   link: string
   media: string
   mediaType: 'image' | 'video'
+  accent: 'red' | 'yellow' | 'blue'
   id: string
 }
 
@@ -49,6 +50,7 @@ export const PROJECTS: Project[] = [
     link: '/3d-branding',
     media: '/cover.jpg',
     mediaType: 'image',
+    accent: 'red',
     id: 'project1',
   },
   {
@@ -57,6 +59,7 @@ export const PROJECTS: Project[] = [
     link: '/architectural-renders',
     media: '/cover.jpg',
     mediaType: 'image',
+    accent: 'yellow',
     id: 'project2',
   },
   {
@@ -65,6 +68,7 @@ export const PROJECTS: Project[] = [
     link: '/web-development',
     media: '/cover.jpg',
     mediaType: 'image',
+    accent: 'blue',
     id: 'project3',
   },
 ]
