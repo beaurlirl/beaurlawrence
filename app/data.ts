@@ -83,7 +83,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work1',
   },
   {
-    company: 'Michael De Luna, AIA',
+    company: 'Michael De Luna, AIA, Architect',
     title: 'Design & Media Consultant',
     start: '2023',
     end: 'Present',
@@ -166,4 +166,4 @@ export const FEED_ITEMS: FeedItem[] = [
   },
 ]
 
-export const EMAIL = 'hello@beaulawrence.com'
+export const EMAIL = 'beaurlirl@gmail.com'
