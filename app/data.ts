@@ -102,13 +102,13 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 
 export const CURRENT_PROJECTS: CurrentProject[] = [
   {
-    name: 'plaza.onl',
-    link: 'https://plaza.onl',
+    name: 'hue.onl',
+    link: 'https://hue.onl',
     id: 'current-1',
   },
   {
-    name: 'hue.onl',
-    link: 'https://hue.onl',
+    name: 'catalog.onl',
+    link: 'https://catalog.onl',
     id: 'current-2',
   },
   {
@@ -124,12 +124,6 @@ export const BLOG_POSTS: BlogPost[] = [
     description: 'How AI is changing the way we design',
     link: '/feed/exploring-the-intersection-of-design-ai-and-design-engineering',
     uid: 'feed-1',
-  },
-  {
-    title: 'Why I left my job to start my own company',
-    description: 'A deeper look at the shift to independent work.',
-    link: '/feed/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'feed-2',
   },
   {
     title: 'What I learned from my first year of freelancing',

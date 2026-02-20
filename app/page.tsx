@@ -234,7 +234,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium text-zinc-900">Current Projects</h3>
+        <h3 className="mb-5 text-lg font-medium text-zinc-900">Directory</h3>
         <div className="flex flex-col space-y-3">
           {CURRENT_PROJECTS.map((project) => (
             <a
