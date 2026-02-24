@@ -1,4 +1,9 @@
+import Image from 'next/image'
+import { FEATURED_PROJECTS, EMAIL } from '../data'
+
 export default function ArchitecturalRendersPage() {
+  const project = FEATURED_PROJECTS['architectural-renders']
+
   return (
     <main className="space-y-10">
       <section className="space-y-3">
@@ -14,15 +19,37 @@ export default function ArchitecturalRendersPage() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-zinc-800/80 bg-zinc-950/60 p-6">
-        <h2 className="text-lg font-medium text-zinc-100">
-          Project gallery in progress
-        </h2>
-        <p className="mt-2 text-sm text-zinc-400">
-          This page will showcase recent interior and hospitality visualization
-          work.
-        </p>
+      <section className="space-y-4">
+        <div className="overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-950/60">
+          <div className="relative aspect-video w-full bg-zinc-800/40">
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 672px"
+              unoptimized
+            />
+          </div>
+          <div className="space-y-1 p-4">
+            <h2 className="text-lg font-medium text-zinc-100">
+              {project.title}
+            </h2>
+            <p className="text-sm text-zinc-400">{project.description}</p>
+          </div>
+        </div>
       </section>
+
+      <p className="text-xs text-zinc-500">
+        Want to see more samples of architectural or 3D work?{' '}
+        <a
+          href={`mailto:${EMAIL}?subject=Consultation — Architectural Renders`}
+          className="underline hover:text-zinc-400"
+        >
+          Reach out for a consultation
+        </a>
+        .
+      </p>
     </main>
   )
 }

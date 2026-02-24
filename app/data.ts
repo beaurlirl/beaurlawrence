@@ -76,7 +76,7 @@ export const PROJECTS: Project[] = [
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'Independent Studio',
-    title: 'Creative Director',
+    title: 'Director, Designer',
     start: '2020',
     end: 'Present',
     link: '#',
@@ -91,10 +91,18 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work2',
   },
   {
+    company: 'Muse Labs (YC S21)',
+    title: 'Creative Direction/Marketing - Consultant',
+    start: '2020',
+    end: '2021',
+    link: '#',
+    id: 'work4',
+  },
+  {
     company: 'Client Collaborations',
     title: '3D / Brand Designer',
-    start: '2016',
-    end: '2020',
+    start: '2018',
+    end: 'Present',
     link: '#',
     id: 'work3',
   },
@@ -146,7 +154,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/',
+    link: 'https://www.linkedin.com/in/beaulawrence/',
   },
 ]
 
@@ -161,3 +169,31 @@ export const FEED_ITEMS: FeedItem[] = [
 ]
 
 export const EMAIL = 'beaurlirl@gmail.com'
+
+export type FeaturedProject = {
+  title: string
+  description: string
+  image: string // placeholder path — replace with your project image
+  category: 'graphic' | '3d' | 'web'
+}
+
+export const FEATURED_PROJECTS: Record<string, FeaturedProject> = {
+  '3d-branding': {
+    title: 'Featured Project',
+    description: 'A representative sample of 3D and brand identity work.',
+    image: '/projects/placeholder.svg', // Replace with /projects/3d-branding.jpg when ready
+    category: '3d',
+  },
+  'architectural-renders': {
+    title: 'Featured Project',
+    description: 'A representative sample of architectural visualization work.',
+    image: '/projects/placeholder.svg', // Replace with /projects/architectural.jpg when ready
+    category: '3d',
+  },
+  'web-development': {
+    title: 'Featured Project',
+    description: 'A representative sample of web design and development work.',
+    image: '/projects/placeholder.svg', // Replace with /projects/web.jpg when ready
+    category: 'web',
+  },
+}
