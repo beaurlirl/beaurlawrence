@@ -173,27 +173,32 @@ export const EMAIL = 'beaurlirl@gmail.com'
 export type FeaturedProject = {
   title: string
   description: string
-  image: string // placeholder path — replace with your project image
+  images: string[] // paths to project images — add more as you upload
   category: 'graphic' | '3d' | 'web'
 }
 
 export const FEATURED_PROJECTS: Record<string, FeaturedProject> = {
   '3d-branding': {
-    title: 'Featured Project',
-    description: 'A representative sample of 3D and brand identity work.',
-    image: '/projects/placeholder.svg', // Replace with /projects/3d-branding.jpg when ready
+    title: 'Contxt — Graphic Work',
+    description: 'Concept-driven visual systems and brand identity work.',
+    images: ['/contxt1.png', '/contxt2.png'],
     category: '3d',
   },
   'architectural-renders': {
-    title: 'Featured Project',
-    description: 'A representative sample of architectural visualization work.',
-    image: '/projects/placeholder.svg', // Replace with /projects/architectural.jpg when ready
+    title: 'Madison Apothecary — Architectural Renders',
+    description: 'Spatial visualization with a focus on mood, material, and light.',
+    images: [
+      '/madisonapoth1%20copy.png',
+      '/madisonapoth2%20copy.png',
+      '/madisonapoth3%20copy.png',
+      '/madisonapoth4%20copy.png',
+    ],
     category: '3d',
   },
   'web-development': {
     title: 'Featured Project',
     description: 'A representative sample of web design and development work.',
-    image: '/projects/placeholder.svg', // Replace with /projects/web.jpg when ready
+    images: [], // Add image paths when you upload web project assets
     category: 'web',
   },
 }
