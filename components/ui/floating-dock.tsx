@@ -25,7 +25,7 @@ export function FloatingDock({ items, className }: FloatingDockProps) {
             <Link
               href={item.href}
               aria-label={item.title}
-              className="flex h-10 w-10 items-center justify-center rounded-full text-zinc-400 transition-colors hover:text-zinc-100"
+              className="flex h-10 w-10 items-center justify-center rounded-full text-retro-light transition-colors hover:text-zinc-100"
             >
               {item.icon}
             </Link>

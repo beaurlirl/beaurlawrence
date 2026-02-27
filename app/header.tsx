@@ -15,19 +15,19 @@ export function Header() {
             Beau Lawrence
           </Link>
           {showBreadcrumb && (
-            <div className="mt-1 text-xs text-zinc-600">
+            <div className="mt-1 text-xs text-retro-dark">
               <Link className="hover:text-zinc-900" href="/">
                 Home
               </Link>
-              <span className="mx-2 text-zinc-500">/</span>
-              <span className="text-zinc-500">{pathname.replace('/', '')}</span>
+              <span className="mx-2 text-retro">/</span>
+              <span className="text-retro">{pathname.replace('/', '')}</span>
             </div>
           )}
           <TextEffect
             as="p"
             preset="fade"
             per="char"
-            className="text-zinc-600"
+            className="text-retro-dark"
             delay={0.5}
           >
             3D Graphic & Brand Designer · Web Development · Architectural Renders

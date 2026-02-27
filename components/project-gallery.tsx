@@ -35,8 +35,8 @@ export function ProjectGallery({
           />
         </div>
         <div className="space-y-1 p-4">
-          <h2 className="text-lg font-medium text-zinc-100">{title}</h2>
-          <p className="text-sm text-zinc-400">{description}</p>
+        <h2 className="text-lg font-medium text-zinc-900">{title}</h2>
+        <p className="text-sm text-retro-dark">{description}</p>
         </div>
       </div>
     )
@@ -45,8 +45,8 @@ export function ProjectGallery({
   return (
     <div className="space-y-4">
       <div className="space-y-1">
-        <h2 className="text-lg font-medium text-zinc-100">{title}</h2>
-        <p className="text-sm text-zinc-400">{description}</p>
+        <h2 className="text-lg font-medium text-zinc-900">{title}</h2>
+        <p className="text-sm text-retro-dark">{description}</p>
       </div>
       <div
         className={`grid gap-4 ${
@@ -108,7 +108,7 @@ export function ProjectGallery({
               href={webPreviewUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block border-t border-zinc-200/80 px-4 py-3 text-sm text-zinc-600 hover:bg-zinc-50 hover:text-zinc-900"
+              className="block border-t border-zinc-200/80 px-4 py-3 text-sm text-retro-dark hover:bg-zinc-50 hover:text-zinc-900"
             >
               View live site →
             </a>

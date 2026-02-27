@@ -101,7 +101,7 @@ function ProjectMedia({ src, type, accent }: ProjectMediaProps) {
             exit: { opacity: 0, transition: { duration: 0 } },
           }}
         >
-          <XIcon className="h-5 w-5 text-zinc-500" />
+          <XIcon className="h-5 w-5 text-retro" />
         </MorphingDialogClose>
       </MorphingDialogContainer>
     </MorphingDialog>
@@ -160,7 +160,7 @@ export default function Personal() {
               Studio-led visual systems built for brands, spaces, and digital
               launches.
             </p>
-            <p className="text-sm text-zinc-600">
+            <p className="text-sm text-retro-dark">
               Select a service below to explore the work.
             </p>
           </div>
@@ -191,7 +191,7 @@ export default function Personal() {
                   {project.name}
                   <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
                 </a>
-                <p className="text-base text-zinc-600">
+                <p className="text-base text-retro-dark">
                   {project.description}
                 </p>
               </div>
@@ -208,7 +208,7 @@ export default function Personal() {
         <div className="flex flex-col space-y-3">
           {WORK_EXPERIENCE.map((job) => (
             <a
-              className="flex items-center justify-between rounded-xl border border-zinc-200/70 bg-white/60 px-4 py-3 text-sm text-zinc-700 transition-colors hover:border-zinc-400/60 hover:text-zinc-900"
+              className="flex items-center justify-between rounded-xl border border-zinc-200/70 bg-white/60 px-4 py-3 text-sm text-retro-dark transition-colors hover:border-zinc-400/60 hover:text-zinc-900"
               href={job.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -218,11 +218,11 @@ export default function Personal() {
                 <p className="text-base font-medium text-zinc-900">
                   {job.title}
                 </p>
-                <p className="text-xs text-zinc-600">
+                <p className="text-xs text-retro-dark">
                   {job.company}
                 </p>
               </div>
-              <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
+              <span className="text-xs uppercase tracking-[0.2em] text-retro">
                 {job.start} - {job.end}
               </span>
             </a>
@@ -238,7 +238,7 @@ export default function Personal() {
         <div className="flex flex-col space-y-3">
           {CURRENT_PROJECTS.map((project) => (
             <a
-              className="flex items-center justify-between rounded-xl border border-zinc-200/70 bg-white/60 px-4 py-3 text-sm text-zinc-700 transition-colors hover:border-zinc-400/60 hover:text-zinc-900"
+              className="flex items-center justify-between rounded-xl border border-zinc-200/70 bg-white/60 px-4 py-3 text-sm text-retro-dark transition-colors hover:border-zinc-400/60 hover:text-zinc-900"
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -247,7 +247,7 @@ export default function Personal() {
               <p className="text-base font-medium text-zinc-900">
                 {project.name}
               </p>
-              <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
+              <span className="text-xs uppercase tracking-[0.2em] text-retro">
                 Live
               </span>
             </a>
@@ -263,7 +263,7 @@ export default function Personal() {
         <h3 className="text-lg font-medium text-zinc-900">Feed</h3>
         <Link
           href="/feed"
-          className="text-sm text-zinc-600 hover:text-zinc-900"
+          className="text-sm text-retro-dark hover:text-zinc-900"
         >
           View all
         </Link>
@@ -289,7 +289,7 @@ export default function Personal() {
                   <h4 className="font-normal text-zinc-900">
                     {post.title}
                   </h4>
-                  <p className="text-zinc-600">
+                  <p className="text-retro-dark">
                     {post.description}
                   </p>
                 </div>
@@ -304,17 +304,17 @@ export default function Personal() {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between rounded-xl border border-zinc-200/70 bg-white/60 px-4 py-3 text-sm text-zinc-700 transition-colors hover:border-zinc-400/60 hover:text-zinc-900"
+              className="flex items-center justify-between rounded-xl border border-zinc-200/70 bg-white/60 px-4 py-3 text-sm text-retro-dark transition-colors hover:border-zinc-400/60 hover:text-zinc-900"
             >
               <div>
                 <p className="font-medium text-zinc-900">
                   {item.title}
                 </p>
-                <p className="text-xs text-zinc-600">
+                <p className="text-xs text-retro-dark">
                   {item.description}
                 </p>
               </div>
-              <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
+              <span className="text-xs uppercase tracking-[0.2em] text-retro">
                 {item.platform}
               </span>
             </a>
@@ -327,7 +327,7 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-5 text-lg font-medium text-zinc-900">Connect</h3>
-        <p className="mb-5 text-zinc-600">
+        <p className="mb-5 text-retro-dark">
           Feel free to contact me at{' '}
           <a className="underline text-zinc-900" href={`mailto:${EMAIL}`}>
             {EMAIL}

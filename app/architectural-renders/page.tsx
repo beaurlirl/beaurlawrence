@@ -7,13 +7,13 @@ export default function ArchitecturalRendersPage() {
   return (
     <main className="space-y-10">
       <section className="space-y-3">
-        <p className="text-sm uppercase tracking-[0.3em] text-zinc-500">
+        <p className="text-sm uppercase tracking-[0.3em] text-retro">
           Architectural Renders
         </p>
-        <h1 className="text-2xl font-medium text-zinc-100">
+        <h1 className="text-2xl font-medium text-zinc-900">
           Atmosphere-driven visualization for spaces and interiors.
         </h1>
-        <p className="text-zinc-400">
+        <p className="text-retro-dark">
           Spatial storytelling with a focus on light, material, and human scale.
           Designed to sell the experience, not just the structure.
         </p>
@@ -27,11 +27,11 @@ export default function ArchitecturalRendersPage() {
         />
       </section>
 
-      <p className="text-xs text-zinc-500">
+      <p className="text-xs text-retro">
         Want to see more samples of architectural or 3D work?{' '}
         <a
           href={`mailto:${EMAIL}?subject=Consultation — Architectural Renders`}
-          className="underline hover:text-zinc-400"
+          className="underline hover:text-retro"
         >
           Reach out for a consultation
         </a>

@@ -7,13 +7,13 @@ export default function ThreeDBrandingPage() {
   return (
     <main className="space-y-10">
       <section className="space-y-3">
-        <p className="text-sm uppercase tracking-[0.3em] text-zinc-500">
+        <p className="text-sm uppercase tracking-[0.3em] text-retro">
           3D & Brand Identities
         </p>
-        <h1 className="text-2xl font-medium text-zinc-100">
+        <h1 className="text-2xl font-medium text-zinc-900">
           Immersive visual systems and product narratives.
         </h1>
-        <p className="text-zinc-400">
+        <p className="text-retro-dark">
           Brand worlds built from concept, texture, and motion. From packaging
           to hero renders, each piece is designed to feel tactile and premium.
         </p>
@@ -30,11 +30,11 @@ export default function ThreeDBrandingPage() {
         />
       </section>
 
-      <p className="text-xs text-zinc-500">
+      <p className="text-xs text-retro">
         Want to see more samples of graphic or 3D work?{' '}
         <a
           href={`mailto:${EMAIL}?subject=Consultation — 3D & Brand Work`}
-          className="underline hover:text-zinc-400"
+          className="underline hover:text-retro"
         >
           Reach out for a consultation
         </a>
