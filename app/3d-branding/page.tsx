@@ -24,6 +24,9 @@ export default function ThreeDBrandingPage() {
           images={project.images}
           title={project.title}
           description={project.description}
+          imageFit={project.imageFit}
+          imageBg={project.imageBg}
+          webPreviewUrl={project.webPreviewUrl}
         />
       </section>
 

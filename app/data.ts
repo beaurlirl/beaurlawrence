@@ -175,18 +175,25 @@ export type FeaturedProject = {
   description: string
   images: string[] // paths to project images — add more as you upload
   category: 'graphic' | '3d' | 'web'
+  imageFit?: 'cover' | 'contain' // contain = fit whole image in frame
+  imageBg?: 'dark' | 'white' // background behind image
+  webPreviewUrl?: string // live site preview
 }
 
 export const FEATURED_PROJECTS: Record<string, FeaturedProject> = {
   '3d-branding': {
-    title: 'Contxt — Graphic Work',
-    description: 'Concept-driven visual systems and brand identity work.',
+    title: "Branding and graphics for Jordan Brand's Sumiko Wilson's Music podcast, Contxt",
+    description: 'Exploring motifs, the process, and the way we listen to music.',
     images: ['/contxt1.png', '/contxt2.png'],
     category: '3d',
+    imageFit: 'contain',
+    imageBg: 'white',
+    webPreviewUrl: 'https://contxtassets.vercel.app/',
   },
   'architectural-renders': {
-    title: 'Madison Apothecary — Architectural Renders',
-    description: 'Spatial visualization with a focus on mood, material, and light.',
+    title: 'Madison Apothecary at the Colony Hotel in Palm Beach',
+    description:
+      "Conceptual renders for Madison Apothecary's pop up at the Colony Hotel in Palm Beach, Florida. Rendered to scale.",
     images: [
       '/madisonapoth1%20copy.png',
       '/madisonapoth2%20copy.png',
