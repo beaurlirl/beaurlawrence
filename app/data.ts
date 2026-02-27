@@ -182,7 +182,7 @@ export type FeaturedProject = {
 
 export const FEATURED_PROJECTS: Record<string, FeaturedProject> = {
   '3d-branding': {
-    title: "Branding and graphics for Jordan Brand's Sumiko Wilson's Music podcast, Contxt",
+    title: "Branding and graphics for journalist Sumiko Wilson's Music podcast, Contxt",
     description: 'Exploring motifs, the process, and the way we listen to music.',
     images: ['/contxt1.png', '/contxt2.png'],
     category: '3d',
