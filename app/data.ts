@@ -92,19 +92,11 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
   {
     company: 'Muse Labs (YC S21)',
-    title: 'Creative Direction/Marketing - Consultant',
+    title: 'Marketing Consultant',
     start: '2020',
     end: '2021',
     link: '#',
     id: 'work4',
-  },
-  {
-    company: 'Client Collaborations',
-    title: '3D / Brand Designer',
-    start: '2018',
-    end: 'Present',
-    link: '#',
-    id: 'work3',
   },
 ]
 
