@@ -4,7 +4,7 @@ type Project = {
   link: string
   media: string
   mediaType: 'image' | 'video'
-  accent: 'red' | 'yellow' | 'blue'
+  accent: 'dark' | 'medium' | 'light'
   id: string
 }
 
@@ -17,24 +17,9 @@ type WorkExperience = {
   id: string
 }
 
-type BlogPost = {
-  title: string
-  description: string
-  link: string
-  uid: string
-}
-
 type SocialLink = {
   label: string
   link: string
-}
-
-type FeedItem = {
-  title: string
-  description: string
-  link: string
-  platform: string
-  id: string
 }
 
 type CurrentProject = {
@@ -50,7 +35,7 @@ export const PROJECTS: Project[] = [
     link: '/3d-branding',
     media: '/cover.jpg',
     mediaType: 'image',
-    accent: 'red',
+    accent: 'dark',
     id: 'project1',
   },
   {
@@ -59,7 +44,7 @@ export const PROJECTS: Project[] = [
     link: '/architectural-renders',
     media: '/cover.jpg',
     mediaType: 'image',
-    accent: 'yellow',
+    accent: 'medium',
     id: 'project2',
   },
   {
@@ -68,7 +53,7 @@ export const PROJECTS: Project[] = [
     link: '/web-development',
     media: '/cover.jpg',
     mediaType: 'image',
-    accent: 'blue',
+    accent: 'light',
     id: 'project3',
   },
 ]
@@ -112,30 +97,9 @@ export const CURRENT_PROJECTS: CurrentProject[] = [
     id: 'current-2',
   },
   {
-    name: 'directory',
+    name: 'directory.onl',
     link: 'https://directory.onl',
     id: 'current-3',
-  },
-]
-
-export const BLOG_POSTS: BlogPost[] = [
-  {
-    title: 'Exploring the Intersection of Design, AI, and Design Engineering',
-    description: 'How AI is changing the way we design',
-    link: '/feed/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'feed-1',
-  },
-  {
-    title: 'What I learned from my first year of freelancing',
-    description: 'Lessons on process, pricing, and creative growth.',
-    link: '/feed/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'feed-3',
-  },
-  {
-    title: 'How to Export Metadata from MDX for Next.js SEO',
-    description: 'A guide to MDX metadata for clean SEO setups.',
-    link: '/feed/example-mdx-metadata',
-    uid: 'feed-4',
   },
 ]
 
@@ -147,16 +111,6 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/beaulawrence/',
-  },
-]
-
-export const FEED_ITEMS: FeedItem[] = [
-  {
-    title: 'Instagram — latest drops',
-    description: 'Short-form visuals, renders, and concept snippets.',
-    link: 'https://www.instagram.com/beaulawrence/',
-    platform: 'Instagram',
-    id: 'feed-ig',
   },
 ]
 

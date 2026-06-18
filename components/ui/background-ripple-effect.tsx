@@ -44,7 +44,7 @@ export function BackgroundRippleEffect() {
           backgroundImage: `
             linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px),
-            radial-gradient(420px circle at var(--mx) var(--my), rgba(255, 220, 140, 0.7), transparent 55%)
+            radial-gradient(420px circle at var(--mx) var(--my), rgba(24, 24, 27, 0.7), transparent 55%)
           `,
           backgroundSize: '56px 56px, 56px 56px, 100% 100%',
           opacity: 'var(--ripple-opacity)',

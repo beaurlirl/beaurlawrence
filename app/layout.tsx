@@ -6,13 +6,7 @@ import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
 import { BackgroundRippleEffect } from '@/components/ui/background-ripple-effect'
 import { FloatingDock } from '@/components/ui/floating-dock'
-import {
-  HomeIcon,
-  BoxesIcon,
-  Building2Icon,
-  Code2Icon,
-  NewspaperIcon,
-} from 'lucide-react'
+import { HomeIcon, BoxesIcon, Building2Icon, Code2Icon } from 'lucide-react'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -87,11 +81,6 @@ export default function RootLayout({
                     title: 'Web Dev',
                     href: '/web-development',
                     icon: <Code2Icon className="h-5 w-5" />,
-                  },
-                  {
-                    title: 'Feed',
-                    href: '/feed',
-                    icon: <NewspaperIcon className="h-5 w-5" />,
                   },
                 ]}
               />

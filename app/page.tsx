@@ -10,14 +10,10 @@ import {
   MorphingDialogClose,
   MorphingDialogContainer,
 } from '@/components/ui/morphing-dialog'
-import Link from 'next/link'
-import { AnimatedBackground } from '@/components/ui/animated-background'
 import {
   PROJECTS,
   WORK_EXPERIENCE,
   CURRENT_PROJECTS,
-  BLOG_POSTS,
-  FEED_ITEMS,
   EMAIL,
   SOCIAL_LINKS,
 } from './data'
@@ -44,13 +40,13 @@ const TRANSITION_SECTION = {
 type ProjectMediaProps = {
   src: string
   type: 'image' | 'video'
-  accent: 'red' | 'yellow' | 'blue'
+  accent: 'dark' | 'medium' | 'light'
 }
 
 const ACCENT_MAP = {
-  red: 'bg-[#ff1a1a]',
-  yellow: 'bg-[#ffcc00]',
-  blue: 'bg-[#1a4fff]',
+  dark: 'bg-[#3f3f46]',
+  medium: 'bg-[#71717a]',
+  light: 'bg-[#a1a1aa]',
 }
 
 function ProjectMedia({ src, type, accent }: ProjectMediaProps) {
@@ -249,73 +245,6 @@ export default function Personal() {
               </p>
               <span className="text-xs uppercase tracking-[0.2em] text-retro">
                 Live
-              </span>
-            </a>
-          ))}
-        </div>
-      </motion.section>
-
-      <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-      <div className="mb-3 flex items-center justify-between">
-        <h3 className="text-lg font-medium text-zinc-900">Feed</h3>
-        <Link
-          href="/feed"
-          className="text-sm text-retro-dark hover:text-zinc-900"
-        >
-          View all
-        </Link>
-      </div>
-        <div className="flex flex-col space-y-0">
-          <AnimatedBackground
-            enableHover
-            className="h-full w-full rounded-lg bg-zinc-100/60"
-            transition={{
-              type: 'spring',
-              bounce: 0,
-              duration: 0.2,
-            }}
-          >
-            {BLOG_POSTS.map((post) => (
-              <Link
-                key={post.uid}
-                className="-mx-3 rounded-xl px-3 py-3"
-                href={post.link}
-                data-id={post.uid}
-              >
-                <div className="flex flex-col space-y-1">
-                  <h4 className="font-normal text-zinc-900">
-                    {post.title}
-                  </h4>
-                  <p className="text-retro-dark">
-                    {post.description}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </AnimatedBackground>
-        </div>
-        <div className="mt-4 space-y-2">
-          {FEED_ITEMS.map((item) => (
-            <a
-              key={item.id}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between rounded-xl border border-zinc-200/70 bg-white/60 px-4 py-3 text-sm text-retro-dark transition-colors hover:border-zinc-400/60 hover:text-zinc-900"
-            >
-              <div>
-                <p className="font-medium text-zinc-900">
-                  {item.title}
-                </p>
-                <p className="text-xs text-retro-dark">
-                  {item.description}
-                </p>
-              </div>
-              <span className="text-xs uppercase tracking-[0.2em] text-retro">
-                {item.platform}
               </span>
             </a>
           ))}
