@@ -28,6 +28,14 @@ type CurrentProject = {
   id: string
 }
 
+type FeedItem = {
+  title: string
+  description: string
+  link: string
+  platform: string
+  id: string
+}
+
 export const PROJECTS: Project[] = [
   {
     name: '3D & Brand Identities',
@@ -111,6 +119,16 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/beaulawrence/',
+  },
+]
+
+export const FEED_ITEMS: FeedItem[] = [
+  {
+    title: 'Instagram — latest drops',
+    description: 'Short-form visuals, renders, and concept snippets.',
+    link: 'https://www.instagram.com/beaulawrence/',
+    platform: 'Instagram',
+    id: 'feed-ig',
   },
 ]
 

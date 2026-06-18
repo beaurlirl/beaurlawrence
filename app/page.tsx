@@ -14,6 +14,7 @@ import {
   PROJECTS,
   WORK_EXPERIENCE,
   CURRENT_PROJECTS,
+  FEED_ITEMS,
   EMAIL,
   SOCIAL_LINKS,
 } from './data'
@@ -230,7 +231,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium text-zinc-900">Directory</h3>
+        <h3 className="mb-5 text-lg font-medium text-zinc-900">WIPs</h3>
         <div className="flex flex-col space-y-3">
           {CURRENT_PROJECTS.map((project) => (
             <a
@@ -245,6 +246,32 @@ export default function Personal() {
               </p>
               <span className="text-xs uppercase tracking-[0.2em] text-retro">
                 Live
+              </span>
+            </a>
+          ))}
+        </div>
+      </motion.section>
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-lg font-medium text-zinc-900">Instagram</h3>
+        <div className="flex flex-col space-y-2">
+          {FEED_ITEMS.map((item) => (
+            <a
+              key={item.id}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between rounded-xl border border-zinc-200/70 bg-white/60 px-4 py-3 text-sm text-retro-dark transition-colors hover:border-zinc-400/60 hover:text-zinc-900"
+            >
+              <div>
+                <p className="font-medium text-zinc-900">{item.title}</p>
+                <p className="text-xs text-retro-dark">{item.description}</p>
+              </div>
+              <span className="text-xs uppercase tracking-[0.2em] text-retro">
+                {item.platform}
               </span>
             </a>
           ))}

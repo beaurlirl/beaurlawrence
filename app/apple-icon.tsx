@@ -25,7 +25,7 @@ export default function AppleIcon() {
             height: 164,
             borderRadius: '50%',
             backgroundImage:
-              'radial-gradient(at 30% 30%, rgb(255,255,255) 0%, rgb(255,226,122) 35%, rgb(255,79,216) 60%, rgb(74,125,255) 85%, rgb(0,255,208) 100%)',
+              'radial-gradient(at 30% 30%, rgb(255,255,255) 0%, rgb(212,212,216) 35%, rgb(161,161,170) 60%, rgb(113,113,122) 85%, rgb(24,24,27) 100%)',
           }}
         />
       </div>

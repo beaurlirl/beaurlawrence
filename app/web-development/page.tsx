@@ -42,6 +42,17 @@ export default function WebDevelopmentPage() {
             </span>
           </a>
           <a
+            href="https://www.mdeluna.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between rounded-xl border border-zinc-200/70 bg-white/60 px-4 py-3 text-sm text-retro-dark transition-colors hover:border-zinc-400/60 hover:text-zinc-900"
+          >
+            <span className="font-medium text-zinc-900">mdeluna.com</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-retro">
+              Live
+            </span>
+          </a>
+          <a
             href="https://github.com/beaurlirl"
             target="_blank"
             rel="noopener noreferrer"
