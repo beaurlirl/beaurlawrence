@@ -167,9 +167,13 @@ export const FEATURED_PROJECTS: Record<string, FeaturedProject> = {
     category: '3d',
   },
   'web-development': {
-    title: 'Featured Project',
-    description: 'A representative sample of web design and development work.',
-    images: [], // Add image paths when you upload web project assets
+    title: 'Michael De Luna, AIA, Architect',
+    description:
+      'Architecture firm site with portfolio, code/zoning resources, and project filing.',
+    images: ['/mdeluna-petrossian.png'],
     category: 'web',
+    imageFit: 'contain',
+    imageBg: 'white',
+    webPreviewUrl: 'https://www.mdeluna.com',
   },
 }
