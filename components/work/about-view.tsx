@@ -1,38 +1,20 @@
 'use client'
 
-import { Magnetic } from '@/components/ui/magnetic'
-import { EMAIL, SOCIAL_LINKS, WORK_EXPERIENCE } from '@/app/data'
+import { WORK_EXPERIENCE } from '@/app/data'
 
-export function ContactPane() {
+export function AboutView() {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-lg font-medium text-zinc-900">Contact</h2>
+        <h1 className="text-2xl font-medium tracking-tight text-zinc-900">Beau Lawrence</h1>
         <p className="mt-2 text-retro-dark">
-          Feel free to reach out at{' '}
-          <a className="text-zinc-900 underline" href={`mailto:${EMAIL}`}>
-            {EMAIL}
-          </a>
+          3D Graphic & Brand Designer working across brand identity, architectural visualization,
+          and web development.
         </p>
       </div>
 
-      <div className="flex items-center gap-3">
-        {SOCIAL_LINKS.map((link) => (
-          <Magnetic key={link.label} springOptions={{ bounce: 0 }} intensity={0.3}>
-            <a
-              href={link.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="neu-raised rounded-full px-4 py-2 text-sm font-medium text-zinc-700 hover:text-zinc-900"
-            >
-              {link.label}
-            </a>
-          </Magnetic>
-        ))}
-      </div>
-
       <div>
-        <h3 className="mb-3 text-sm font-medium text-zinc-900">Experience</h3>
+        <h2 className="mb-3 text-sm font-medium text-zinc-900">Experience</h2>
         <div className="flex flex-col gap-3">
           {WORK_EXPERIENCE.map((job) => {
             const content = (

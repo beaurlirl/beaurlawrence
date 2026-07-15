@@ -1,5 +1,5 @@
-import { AppShell } from '@/components/shell/app-shell'
+import { SiteShell } from '@/components/work/site-shell'
 
 export default function ArchitecturalRendersPage() {
-  return <AppShell initialSection="services" initialService="architectural-renders" />
+  return <SiteShell initialSection="work" />
 }

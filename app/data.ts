@@ -1,47 +1,54 @@
-export type SectionId = 'services' | 'projects' | 'contact'
+export type SectionId = 'work' | 'about' | 'contact'
 
-export type SidebarSection = {
+export type NavSection = {
   id: SectionId
   label: string
 }
 
-export const SIDEBAR_SECTIONS: SidebarSection[] = [
-  { id: 'services', label: 'Services' },
-  { id: 'projects', label: 'Current Projects' },
+export const NAV_SECTIONS: NavSection[] = [
+  { id: 'work', label: 'Work' },
+  { id: 'about', label: 'About' },
   { id: 'contact', label: 'Contact' },
 ]
 
-export type ServiceSlug = '3d-branding' | 'architectural-renders' | 'web-development'
-
-export type Service = {
-  slug: ServiceSlug
-  name: string
-  description: string
-  longDescription: string
-  images: string[]
-  imageFit: 'cover' | 'contain'
-  imageBg: 'dark' | 'white'
-  webPreviewUrl?: string
+export type WorkItem = {
+  id: string
+  year: string
+  title: string
+  category: string
+  link?: string
+  images?: string[]
+  imageFit?: 'cover' | 'contain'
+  imageBg?: 'dark' | 'white'
+  description?: string
 }
 
-export const SERVICES: Service[] = [
+// Newest first. Add rows here as new work ships — the list adapts automatically.
+export const WORK_ITEMS: WorkItem[] = [
   {
-    slug: '3d-branding',
-    name: '3D & Brand Identities',
-    description: 'Concept-driven visual systems, product renders, and brand worlds.',
-    longDescription:
-      "Branding and graphics for journalist Sumiko Wilson's Music podcast, Contxt — exploring motifs, the process, and the way we listen to music.",
-    images: ['/contxt1.png', '/contxt2.png'],
+    id: 'mdeluna',
+    year: '24',
+    title: 'mdeluna.com',
+    category: 'Web Development',
+    link: 'https://www.mdeluna.com',
+    images: ['/mdeluna-petrossian.png'],
     imageFit: 'contain',
     imageBg: 'white',
-    webPreviewUrl: 'https://contxtassets.vercel.app/',
+    description:
+      'Architecture firm site for Michael De Luna, AIA — portfolio, code/zoning resources, and project filing.',
   },
   {
-    slug: 'architectural-renders',
-    name: 'Architectural Renders',
-    description: 'Spatial visualization with a focus on mood, material, and light.',
-    longDescription:
-      "Conceptual renders for Madison Apothecary's pop up at the Colony Hotel in Palm Beach, Florida. Rendered to scale.",
+    id: 'hue',
+    year: '24',
+    title: 'hue.onl',
+    category: 'Web App',
+    link: 'https://hue.onl',
+  },
+  {
+    id: 'madison-apothecary',
+    year: '23',
+    title: 'Madison Apothecary',
+    category: 'Architecture',
     images: [
       '/madisonapoth1%20copy.png',
       '/madisonapoth2%20copy.png',
@@ -50,17 +57,41 @@ export const SERVICES: Service[] = [
     ],
     imageFit: 'cover',
     imageBg: 'dark',
+    description:
+      "Conceptual renders for Madison Apothecary's pop up at the Colony Hotel in Palm Beach, Florida. Rendered to scale.",
   },
   {
-    slug: 'web-development',
-    name: 'Web Development',
-    description: 'Modern, high-performance sites with strong brand presence.',
-    longDescription:
-      'Architecture firm site for Michael De Luna, AIA — portfolio, code/zoning resources, and project filing.',
-    images: ['/mdeluna-petrossian.png'],
+    id: 'catalog',
+    year: '23',
+    title: 'catalog.onl',
+    category: 'Web App',
+    link: 'https://catalog.onl',
+  },
+  {
+    id: 'contxt',
+    year: '23',
+    title: 'Contxt',
+    category: '3D & Brand',
+    link: 'https://contxtassets.vercel.app/',
+    images: ['/contxt1.png', '/contxt2.png'],
     imageFit: 'contain',
     imageBg: 'white',
-    webPreviewUrl: 'https://www.mdeluna.com',
+    description:
+      "Branding and graphics for journalist Sumiko Wilson's Music podcast, Contxt — exploring motifs, the process, and the way we listen to music.",
+  },
+  {
+    id: 'directory',
+    year: '22',
+    title: 'directory.onl',
+    category: 'Web App',
+    link: 'https://directory.onl',
+  },
+  {
+    id: 'plaza',
+    year: '22',
+    title: 'plaza.onl',
+    category: 'Web App',
+    link: 'https://plaza.onl/home',
   },
 ]
 
@@ -97,42 +128,6 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: '2021',
     link: null,
     id: 'work4',
-  },
-]
-
-export type CurrentProject = {
-  name: string
-  description?: string
-  link: string
-  id: string
-}
-
-export const CURRENT_PROJECTS: CurrentProject[] = [
-  {
-    name: 'hue.onl',
-    link: 'https://hue.onl',
-    id: 'current-1',
-  },
-  {
-    name: 'catalog.onl',
-    link: 'https://catalog.onl',
-    id: 'current-2',
-  },
-  {
-    name: 'directory.onl',
-    link: 'https://directory.onl',
-    id: 'current-3',
-  },
-  {
-    name: 'mdeluna.com',
-    description: 'Architecture firm site — portfolio, code/zoning resources, project filing.',
-    link: 'https://www.mdeluna.com',
-    id: 'current-4',
-  },
-  {
-    name: 'plaza.onl',
-    link: 'https://plaza.onl/home',
-    id: 'current-5',
   },
 ]
 

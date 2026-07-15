@@ -1,5 +1,5 @@
-import { AppShell } from '@/components/shell/app-shell'
+import { SiteShell } from '@/components/work/site-shell'
 
 export default function ThreeDBrandingPage() {
-  return <AppShell initialSection="services" initialService="3d-branding" />
+  return <SiteShell initialSection="work" />
 }

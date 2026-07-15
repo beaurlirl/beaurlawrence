@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from 'next-themes'
-import { BackgroundRippleEffect } from '@/components/ui/background-ripple-effect'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -58,9 +57,6 @@ export default function RootLayout({
         >
           <div className="min-h-screen w-full font-[family-name:var(--font-inter-tight)]">
             <div className="rgb-blur" aria-hidden="true" />
-            <div className="pointer-events-none fixed inset-0 z-0">
-              <BackgroundRippleEffect />
-            </div>
             <div className="relative z-10">{children}</div>
           </div>
         </ThemeProvider>

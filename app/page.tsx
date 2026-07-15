@@ -1,5 +1,5 @@
-import { AppShell } from '@/components/shell/app-shell'
+import { SiteShell } from '@/components/work/site-shell'
 
 export default function Home() {
-  return <AppShell initialSection="services" />
+  return <SiteShell initialSection="work" />
 }
