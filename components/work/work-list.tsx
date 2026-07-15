@@ -11,7 +11,7 @@ const LOOPS_PER_PAGE = 2
 const MAX_LOOPS = 40
 
 const rowClass =
-  'group grid w-full grid-cols-[2rem_1fr] items-start gap-3 border-t border-zinc-200 px-4 py-5 text-left transition-colors hover:bg-zinc-50 sm:grid-cols-[3.5rem_1fr_11rem] sm:items-baseline sm:gap-6 sm:px-8 sm:py-7'
+  'group grid w-full grid-cols-[2rem_1fr] items-start gap-3 border-t border-zinc-200 px-4 py-5 text-left transition-colors hover:bg-zinc-50 sm:grid-cols-[3.5rem_1fr_6rem_11rem] sm:items-baseline sm:gap-6 sm:px-8 sm:py-7'
 
 function WorkRow({ item, onOpen }: { item: WorkItem; onOpen: () => void }) {
   const hasDetail = Boolean(item.images && item.images.length > 0)
@@ -25,8 +25,16 @@ function WorkRow({ item, onOpen }: { item: WorkItem; onOpen: () => void }) {
         <span className="block truncate text-2xl font-medium tracking-tight text-zinc-900 transition-colors group-hover:text-retro sm:text-4xl md:text-5xl">
           {item.title}
         </span>
-        <span className="mt-1 block text-[11px] tracking-[0.15em] text-retro-dark uppercase sm:hidden">
-          {item.category}
+        <span className="mt-1 flex items-center gap-3 text-[11px] tracking-[0.15em] text-retro-dark uppercase sm:hidden">
+          <span>{item.category}</span>
+          <span className="inline-flex items-center gap-1 text-zinc-900">
+            View <ArrowUpRightIcon className="h-3 w-3" />
+          </span>
+        </span>
+      </span>
+      <span className="hidden sm:flex sm:items-center">
+        <span className="neu-raised inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-[11px] font-medium tracking-[0.1em] text-zinc-700 uppercase transition-colors group-hover:text-zinc-900">
+          View <ArrowUpRightIcon className="h-3 w-3" />
         </span>
       </span>
       <span className="hidden text-right text-xs tracking-[0.15em] text-retro-dark whitespace-nowrap uppercase sm:block">

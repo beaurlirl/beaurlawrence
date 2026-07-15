@@ -26,10 +26,21 @@ export type WorkItem = {
 // Newest first. Add rows here as new work ships — the list adapts automatically.
 export const WORK_ITEMS: WorkItem[] = [
   {
+    id: 'optimism-bias',
+    year: '24',
+    title: 'Optimism Bias',
+    category: 'Web',
+    link: 'https://optimismbias.net',
+    images: ['/optimism-bias-preview.png'],
+    imageFit: 'cover',
+    imageBg: 'white',
+    description: 'E-commerce site for Optimism Bias, a compression sock brand designed in Ridgewood, NY.',
+  },
+  {
     id: 'mdeluna',
     year: '24',
-    title: 'mdeluna.com',
-    category: 'Web Development',
+    title: 'Michael De Luna, AIA',
+    category: 'Web',
     link: 'https://www.mdeluna.com',
     images: ['/mdeluna-petrossian.png'],
     imageFit: 'contain',
@@ -40,15 +51,15 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     id: 'hue',
     year: '24',
-    title: 'hue.onl',
-    category: 'Web App',
+    title: 'Hue',
+    category: 'Web',
     link: 'https://hue.onl',
   },
   {
     id: 'madison-apothecary',
     year: '23',
     title: 'Madison Apothecary',
-    category: 'Architecture',
+    category: 'Spatial Renderings',
     images: [
       '/madisonapoth1%20copy.png',
       '/madisonapoth2%20copy.png',
@@ -63,8 +74,8 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     id: 'catalog',
     year: '23',
-    title: 'catalog.onl',
-    category: 'Web App',
+    title: 'Catalog',
+    category: 'Web',
     link: 'https://catalog.onl',
   },
   {
@@ -82,15 +93,15 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     id: 'directory',
     year: '22',
-    title: 'directory.onl',
-    category: 'Web App',
+    title: 'Directory',
+    category: 'Web',
     link: 'https://directory.onl',
   },
   {
     id: 'plaza',
     year: '22',
-    title: 'plaza.onl',
-    category: 'Web App',
+    title: 'Plaza',
+    category: 'Web',
     link: 'https://plaza.onl/home',
   },
 ]
