@@ -14,7 +14,8 @@ const rowClass =
   'group grid w-full grid-cols-[2rem_1fr] items-start gap-3 border-t border-zinc-200 px-4 py-5 text-left transition-colors hover:bg-zinc-50 sm:grid-cols-[3.5rem_1fr_6rem_11rem] sm:items-baseline sm:gap-6 sm:px-8 sm:py-7'
 
 function WorkRow({ item, onOpen }: { item: WorkItem; onOpen: () => void }) {
-  const hasDetail = Boolean(item.images && item.images.length > 0)
+  const hasDetail = Boolean((item.images && item.images.length > 0) || item.preview)
+  const actionLabel = item.preview ? 'Preview' : 'View'
 
   const inner = (
     <>
@@ -28,13 +29,13 @@ function WorkRow({ item, onOpen }: { item: WorkItem; onOpen: () => void }) {
         <span className="mt-1 flex items-center gap-3 text-[11px] tracking-[0.15em] text-retro-dark uppercase sm:hidden">
           <span>{item.category}</span>
           <span className="inline-flex items-center gap-1 text-zinc-900">
-            View <ArrowUpRightIcon className="h-3 w-3" />
+            {actionLabel} <ArrowUpRightIcon className="h-3 w-3" />
           </span>
         </span>
       </span>
       <span className="hidden sm:flex sm:items-center">
         <span className="neu-raised inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-[11px] font-medium tracking-[0.1em] text-zinc-700 uppercase transition-colors group-hover:text-zinc-900">
-          View <ArrowUpRightIcon className="h-3 w-3" />
+          {actionLabel} <ArrowUpRightIcon className="h-3 w-3" />
         </span>
       </span>
       <span className="hidden text-right text-xs tracking-[0.15em] text-retro-dark whitespace-nowrap uppercase sm:block">
@@ -58,7 +59,93 @@ function WorkRow({ item, onOpen }: { item: WorkItem; onOpen: () => void }) {
   )
 }
 
+function LivePreview({ item, onClose }: { item: WorkItem; onClose: () => void }) {
+  const [loaded, setLoaded] = useState(false)
+  const host = item.link ? new URL(item.link).host.replace(/^www\./, '') : ''
+
+  return (
+    <>
+      <motion.div
+        className="fixed inset-0 z-[60] bg-white/70 backdrop-blur-sm"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={onClose}
+      />
+      <div className="pointer-events-none fixed inset-0 z-[61] flex items-center justify-center p-3 sm:p-6">
+        <motion.div
+          className="neu-flat pointer-events-auto flex h-[85vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl p-2 sm:p-3"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 24 }}
+          transition={{ duration: 0.2, ease: 'easeOut' }}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${item.title} — live preview`}
+        >
+          <div className="flex items-center gap-3 px-2 py-2 sm:px-3">
+            <div className="flex items-center gap-1.5">
+              <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
+              <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
+              <span className="h-3 w-3 rounded-full bg-[#28c840]" />
+            </div>
+            <div className="mx-auto flex min-w-0 items-center gap-2 rounded-full bg-zinc-100 px-4 py-1.5 text-xs text-zinc-500">
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
+              <span className="truncate font-[family-name:var(--font-geist-mono)]">{host}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              {item.link && (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open in new tab"
+                  className="neu-raised flex h-9 w-9 items-center justify-center rounded-full text-zinc-700 transition-colors hover:text-zinc-900"
+                >
+                  <ArrowUpRightIcon className="h-4 w-4" />
+                </a>
+              )}
+              <button
+                type="button"
+                onClick={onClose}
+                aria-label="Close"
+                className="neu-raised flex h-9 w-9 items-center justify-center rounded-full"
+              >
+                <XIcon className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
+
+          <div className="relative flex-1 overflow-hidden rounded-xl bg-white">
+            {!loaded && (
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-retro-dark">
+                <span className="h-6 w-6 animate-spin rounded-full border-2 border-zinc-300 border-t-zinc-600" />
+                <span className="text-xs tracking-[0.15em] uppercase">Loading preview…</span>
+              </div>
+            )}
+            {item.link && (
+              <iframe
+                src={item.link}
+                title={`${item.title} live preview`}
+                loading="lazy"
+                onLoad={() => setLoaded(true)}
+                className="h-full w-full border-0"
+                sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+                referrerPolicy="no-referrer"
+              />
+            )}
+          </div>
+        </motion.div>
+      </div>
+    </>
+  )
+}
+
 function WorkDialog({ item, onClose }: { item: WorkItem; onClose: () => void }) {
+  if (item.preview) {
+    return <LivePreview item={item} onClose={onClose} />
+  }
+
   return (
     <>
       <motion.div

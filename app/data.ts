@@ -21,6 +21,9 @@ export type WorkItem = {
   imageFit?: 'cover' | 'contain'
   imageBg?: 'dark' | 'white'
   description?: string
+  // When true, the row opens an inline live preview (iframe) of `link`
+  // instead of navigating away, keeping the visitor on the project list.
+  preview?: boolean
 }
 
 // Newest first. Add rows here as new work ships — the list adapts automatically.
@@ -53,7 +56,9 @@ export const WORK_ITEMS: WorkItem[] = [
     year: '24',
     title: 'Hue',
     category: 'Web',
-    link: 'https://hue.onl',
+    link: 'https://www.hue.onl',
+    preview: true,
+    description: 'Live preview — an in-progress web experience.',
   },
   {
     id: 'madison-apothecary',
