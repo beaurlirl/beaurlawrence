@@ -22,6 +22,14 @@ export const metadata: Metadata = {
   },
   description:
     '3D Graphic & Brand Designer, Architectural Renders, and Web Development.',
+  openGraph: {
+    title: 'Beau Lawrence - Online',
+    description:
+      '3D Graphic & Brand Designer, Architectural Renders, and Web Development.',
+    url: 'https://brl.onl/',
+    siteName: 'Beau Lawrence',
+    type: 'website',
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
