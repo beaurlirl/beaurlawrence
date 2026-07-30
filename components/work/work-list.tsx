@@ -84,11 +84,6 @@ function LivePreview({ item, onClose }: { item: WorkItem; onClose: () => void })
           aria-label={`${item.title} — live preview`}
         >
           <div className="flex items-center gap-3 px-2 py-2 sm:px-3">
-            <div className="flex items-center gap-1.5">
-              <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
-              <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
-              <span className="h-3 w-3 rounded-full bg-[#28c840]" />
-            </div>
             <div className="mx-auto flex min-w-0 items-center gap-2 rounded-full bg-zinc-100 px-4 py-1.5 text-xs text-zinc-500">
               <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
               <span className="truncate font-[family-name:var(--font-geist-mono)]">{host}</span>
