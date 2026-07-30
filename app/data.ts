@@ -34,9 +34,7 @@ export const WORK_ITEMS: WorkItem[] = [
     title: 'Optimism Bias',
     category: 'Web',
     link: 'https://optimismbias.net',
-    images: ['/optimism-bias-preview.png'],
-    imageFit: 'cover',
-    imageBg: 'white',
+    preview: true,
     description: 'E-commerce site for Optimism Bias, a compression sock brand designed in Ridgewood, NY.',
   },
   {
@@ -45,9 +43,7 @@ export const WORK_ITEMS: WorkItem[] = [
     title: 'Michael De Luna, AIA',
     category: 'Web',
     link: 'https://www.mdeluna.com',
-    images: ['/mdeluna-petrossian.png'],
-    imageFit: 'contain',
-    imageBg: 'white',
+    preview: true,
     description:
       'Architecture firm site for Michael De Luna, AIA — portfolio, code/zoning resources, and project filing.',
   },
@@ -82,6 +78,7 @@ export const WORK_ITEMS: WorkItem[] = [
     title: 'Catalog',
     category: 'Web',
     link: 'https://catalog.onl',
+    preview: true,
   },
   {
     id: 'contxt',
@@ -89,9 +86,7 @@ export const WORK_ITEMS: WorkItem[] = [
     title: 'Contxt',
     category: '3D & Brand',
     link: 'https://contxtassets.vercel.app/',
-    images: ['/contxt1.png', '/contxt2.png'],
-    imageFit: 'contain',
-    imageBg: 'white',
+    preview: true,
     description:
       "Branding and graphics for journalist Sumiko Wilson's Music podcast, Contxt — exploring motifs, the process, and the way we listen to music.",
   },
@@ -100,7 +95,8 @@ export const WORK_ITEMS: WorkItem[] = [
     year: '22',
     title: 'Directory',
     category: 'Web',
-    link: 'https://directory.onl',
+    link: 'https://www.directory.onl',
+    preview: true,
   },
   {
     id: 'plaza',
@@ -108,6 +104,7 @@ export const WORK_ITEMS: WorkItem[] = [
     title: 'Plaza',
     category: 'Web',
     link: 'https://plaza.onl/home',
+    preview: true,
   },
 ]
 
