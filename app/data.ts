@@ -1,4 +1,4 @@
-export type SectionId = 'work' | 'about' | 'contact'
+export type SectionId = 'work' | 'contact'
 
 export type NavSection = {
   id: SectionId
@@ -7,7 +7,6 @@ export type NavSection = {
 
 export const NAV_SECTIONS: NavSection[] = [
   { id: 'work', label: 'Work' },
-  { id: 'about', label: 'About' },
   { id: 'contact', label: 'Contact' },
 ]
 
@@ -105,42 +104,6 @@ export const WORK_ITEMS: WorkItem[] = [
     category: 'Web',
     link: 'https://plaza.onl/home',
     preview: true,
-  },
-]
-
-export type WorkExperience = {
-  company: string
-  title: string
-  start: string
-  end: string
-  link: string | null
-  id: string
-}
-
-export const WORK_EXPERIENCE: WorkExperience[] = [
-  {
-    company: 'Independent Studio',
-    title: 'Director, Designer',
-    start: '2020',
-    end: 'Present',
-    link: null,
-    id: 'work1',
-  },
-  {
-    company: 'Michael De Luna, AIA, Architect',
-    title: 'Design & Media Consultant',
-    start: '2023',
-    end: 'Present',
-    link: 'https://www.mdeluna.com',
-    id: 'work2',
-  },
-  {
-    company: 'Muse Labs (YC S21)',
-    title: 'Marketing Consultant',
-    start: '2020',
-    end: '2021',
-    link: null,
-    id: 'work4',
   },
 ]
 

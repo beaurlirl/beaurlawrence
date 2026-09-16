@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import { XIcon } from 'lucide-react'
-import { EMAIL, NAV_SECTIONS, SOCIAL_LINKS, type SectionId } from '@/app/data'
+import { EMAIL, SOCIAL_LINKS, type SectionId } from '@/app/data'
 
 type SiteHeaderProps = {
   active: SectionId
@@ -22,7 +22,6 @@ export function SiteHeader({ active, onSelect }: SiteHeaderProps) {
   const [hovered, setHovered] = useState(false)
   const [mobileCardOpen, setMobileCardOpen] = useState(false)
   const instagram = SOCIAL_LINKS.find((link) => link.label === 'Instagram')
-  const secondaryNav = NAV_SECTIONS.filter((section) => section.id !== 'work')
 
   return (
     <>
@@ -61,26 +60,17 @@ export function SiteHeader({ active, onSelect }: SiteHeaderProps) {
             BRL
           </button>
 
-          <nav aria-label="Primary" className="flex flex-1 items-baseline justify-end gap-3 sm:justify-start sm:gap-5">
-            {secondaryNav.map((section) => {
-              const isActive = section.id === active
-              return (
-                <button
-                  key={section.id}
-                  type="button"
-                  onClick={() => onSelect(section.id)}
-                  aria-current={isActive}
-                  className={`text-xs font-medium tracking-[0.15em] uppercase transition-colors sm:text-sm ${
-                    isActive ? 'text-zinc-900' : 'text-retro-dark hover:text-zinc-900'
-                  }`}
-                >
-                  {section.label}
-                </button>
-              )
-            })}
-          </nav>
-
-          <div className="flex items-center gap-3">
+          <div className="flex flex-1 items-center justify-end gap-3">
+            <button
+              type="button"
+              onClick={() => onSelect('contact')}
+              aria-current={active === 'contact'}
+              className={`text-xs font-medium tracking-[0.15em] uppercase transition-colors sm:text-sm ${
+                active === 'contact' ? 'text-zinc-900' : 'text-retro-dark hover:text-zinc-900'
+              }`}
+            >
+              Contact
+            </button>
             <a
               href={`mailto:${EMAIL}`}
               className="hidden text-xs text-retro-dark hover:text-zinc-900 sm:inline"

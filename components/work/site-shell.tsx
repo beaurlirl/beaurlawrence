@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import { SiteHeader } from './site-header'
 import { WorkList } from './work-list'
-import { AboutView } from './about-view'
 import { ContactView } from './contact-view'
 import type { SectionId } from '@/app/data'
 
@@ -21,7 +20,7 @@ export function SiteShell({ initialSection = 'work' }: SiteShellProps) {
 
       <main>
         {active === 'work' && <WorkList />}
-        {(active === 'about' || active === 'contact') && (
+        {active === 'contact' && (
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
@@ -31,8 +30,7 @@ export function SiteShell({ initialSection = 'work' }: SiteShellProps) {
               transition={{ duration: 0.25, ease: 'easeOut' }}
               className="mx-auto w-full max-w-2xl px-4 py-10 sm:px-8 sm:py-16"
             >
-              {active === 'about' && <AboutView />}
-              {active === 'contact' && <ContactView />}
+              <ContactView />
             </motion.div>
           </AnimatePresence>
         )}
