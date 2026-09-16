@@ -90,6 +90,16 @@ export const WORK_ITEMS: WorkItem[] = [
       "Branding and graphics for journalist Sumiko Wilson's Music podcast, Contxt — exploring motifs, the process, and the way we listen to music.",
   },
   {
+    id: 'yahweh-piece',
+    year: '23',
+    title: 'Yahweh',
+    category: '3D Art',
+    images: ['/yahweh-piece.png'],
+    imageFit: 'contain',
+    imageBg: 'white',
+    description: '3D artistic visualization and design piece.',
+  },
+  {
     id: 'directory',
     year: '22',
     title: 'Directory',
@@ -104,6 +114,25 @@ export const WORK_ITEMS: WorkItem[] = [
     category: 'Web',
     link: 'https://plaza.onl/home',
     preview: true,
+  },
+  {
+    id: 'hudson-hospitality',
+    year: '22',
+    title: 'Hudson Hospitality',
+    category: 'Brand & Print',
+    images: [
+      '/hudson-hospitality-1.jpg',
+      '/hudson-hospitality-2.jpg',
+      '/hudson-hospitality-3.jpg',
+      '/hudson-hospitality-4.jpg',
+      '/hudson-hospitality-5.jpg',
+      '/hudson-hospitality-6.jpg',
+      '/hudson-hospitality-7.jpg',
+    ],
+    imageFit: 'cover',
+    imageBg: 'dark',
+    description:
+      'Restaurant branding and menu design system for Hudson Hospitality Group.',
   },
 ]
 
